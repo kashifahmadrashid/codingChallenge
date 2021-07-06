@@ -1,4 +1,4 @@
-const creatRecipeHTML = (id, recipeName, ingredientsList, course) => {
+const createRecipeHTML = (id, recipeName, ingredientsList, course) => {
     const html = `
                 <li class="card col-3" data-task-id="${id}" style="min-width: 30vw ">
                     <div class="card-body">
@@ -6,7 +6,7 @@ const creatRecipeHTML = (id, recipeName, ingredientsList, course) => {
                         <p class="card-text">${ingredientsList}</p>
                         <div class="card-footer row">
                             <div class="col-6">
-                                <p class="card-text"><b>Status: </b>${course}</p>
+                                <p class="card-text"><b>Course: </b>${course}</p>
                             </div>
                             <div class="col-3">
                                 <button class="btn btn-outline-danger deleteBtn">
@@ -68,7 +68,7 @@ class RecipeCard {
             const recipe = this.recipes[i];
             
             //create recipe html
-            const recipeHtml = creatRecipeHTML(
+            const recipeHtml = createRecipeHTML(
                 recipe.id,
                 recipe.recipeName,
                 recipe.ingredientsList,
@@ -83,7 +83,7 @@ class RecipeCard {
         const recipesHtml = recipeList.join("\n");
         
         // Set the inner html of the recipeList on the page
-        const recipesList = document.querySelector("#recipe-list");
+        const recipesList = document.querySelector("#recipe-List");
         recipesList.innerHTML = recipesHtml;
     }
 

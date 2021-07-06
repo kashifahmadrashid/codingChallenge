@@ -6,6 +6,7 @@ recipeCard.load();
 //render the loaded card to the page
 recipeCard.render();
 
+
 let recipeName = document.querySelector("#recipeName");
 let ingredientsList = document.querySelector("#ingredientsList");
 let course = document.querySelector("#course");
@@ -15,7 +16,7 @@ let errMsg3 = document.querySelector("#errMsg3");
 let saveBtn = document.querySelector("#saveBtn");
 saveBtn.addEventListener("click", formValidation);
 
-function formValidation(e) {
+function formValidation(event) {
     
     var allPassed = true;
     if (recipeName.value.trim() == "") {
@@ -55,7 +56,11 @@ function formValidation(e) {
     }
 
     if (allPassed){
-        recipeCard.addRecipe(recipeName.value, ingredientsList.value, course.value);
+        recipeCard.addRecipe(
+					recipeName.value,
+					ingredientsList.value,
+					course.value
+				);
         recipeName.value = "";
         ingredientsList.value = "";
         course.value = "";
@@ -67,7 +72,7 @@ function formValidation(e) {
         course.value.borderColor = "grey";
     }
 
-    const recipeHtml = creatRecipeHTML(
+    const recipeHtml = createRecipeHTML(
         recipeName.value,
         ingredientsList.value,
         course.value
@@ -77,10 +82,10 @@ function formValidation(e) {
     recipeCard.save();
     recipeCard.render();
        
-e.preventDefault(); 
+event.preventDefault(); 
 }
 
-const recipeList = document.querySelector("#recipe-list");
+const recipeList = document.querySelector("#recipe-List");
 //Add onclick event listener to the recipe list
 
 recipeList.addEventListener("click", (event) =>{
