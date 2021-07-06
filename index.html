@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./css/app.css" rel="stylesheet">
+    
+</head>
+
+<main>
+    <header>
+        <h1>
+            Bon Apetite
+        </h1>
+    </header>
+    <body>
+       <!-- Button trigger modal -->
+<div>
+       <button type="button" class="btn btn-primary addRecipe" data-bs-toggle="modal" data-bs-target="#exampleModal">
+         Add a Recipe
+      </button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Make a Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="recipeName" class="form-label">Name of the Recipe</label>
+    <input type="text" class="form-control" id="recipeName" aria-describedby="" >
+    <span id="errMsg1" class="msg1"></span>
+  </div>
+  <div class="mb-3">
+    <label for="ingredientsList" class="form-label">Add Ingredients</label>
+    <input type="text" class="form-control" id="ingredientsList">
+    <span id="errMsg2" class="msg2"></span>
+  </div>
+  
+  <div class="row mb-3 ">
+                  <div class="col .col-xs-12 .col-sm-6 .col-md-8">
+                    <label for="course" class="form-label">Select Your Course</label>  
+                    <select class="form-select " aria-label="courseType" id="course">
+                      <option selected>Choose</option>
+                      <option value="Daily Meal">Starter</option>
+                      <option value="Weekend">Main Course</option>
+                      <option value="Weekend">Beverage</option>
+                      <option value="Special">Dessert</option>
+                    </select>
+                    <span id="errMsg3" class="msg3"></span>
+                  </div>
+                  
+                </div>
+                <div class="col .col-xs-12 .col-sm-6 .col-md-8 mb-3">
+                    <button class="btn btn-primary" type="submit" id="saveBtn">Save Recipe</button>
+                  </div>
+  
+
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="recipe-Container" id="list-container"> 
+        <!-- List group starts here -->
+        <ul class="recipe-group" id="recipe-List"></ul>
+    </div>
+    
+
+<script src="./index.js"></script>
+<script src="./recipe.js"></script> 
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</html>
+</main>
+</html>
