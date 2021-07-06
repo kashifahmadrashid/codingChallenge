@@ -1,9 +1,7 @@
 # codingChallenge 
 Coding Challenge Activity - Recipe App
 
-
-
-<==============Installation Instruction=============>
+<h1>Installation Instruction</h1>
 
 The App can be easily accessible by visiting GitHub public page provided with this challenge. Once open, a user can test the app by clicking on `Add a Recipe` button and form will prompt user to fill up the details such as `Recipe Name` and `Ingredient List` to add and select the type of `course`. Once all inputs are added, a user can click `Save Recipe` button. Once saved, the recipe card will appear on the screen. The card has a `Delete` button which can be used to delete the recipe card. 
 
