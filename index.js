@@ -1,5 +1,9 @@
+//initialize a new recipeCard with currentId set to 0
 const recipeCard = new RecipeCard(0);
+
+//load the recipe card from localstorage
 recipeCard.load();
+//render the loaded card to the page
 recipeCard.render();
 
 let recipeName = document.querySelector("#recipeName");
@@ -89,7 +93,7 @@ recipeList.addEventListener("click", (event) =>{
         const recipeId = Number(parentRecipe.dataset.recipeId);
 
         //delete recipe card
-        const recipe = recipeCard.getrecipeById(recipeId);
+       
         recipeCard.deleteRecipe(recipeId);
 
         //save the recipes to local storage
